@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG-Based Information Retrieval</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>RAG-Based Information Retrieval</h1>
+        <p class="subtitle">
+          Upload a PDF and ask questions. Answers come strictly from your document.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>1. Upload PDF</h2>
+        <div class="row">
+          <input type="file" id="pdfInput" accept="application/pdf" />
+          <button id="uploadBtn">Upload &amp; Index</button>
+        </div>
+        <p id="uploadStatus" class="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>2. Ask a Question</h2>
+        <div class="row">
+          <input
+            type="text"
+            id="questionInput"
+            placeholder="Type your question"
+            disabled
+          />
+          <button id="askBtn" disabled>Ask</button>
+        </div>
+        <p id="askStatus" class="status"></p>
+        <div id="answerBox" class="answer"></div>
+        <div id="errorBox" class="error"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
